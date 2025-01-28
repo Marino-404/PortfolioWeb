@@ -32,6 +32,19 @@ body {
   }
 }
 
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #767676;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .typewriter {
   display: inline-block;
   white-space: nowrap;
@@ -43,7 +56,6 @@ body {
   animation-iteration-count: infinite;
 }
 
-/* Crear el cursor (la línea que marca la escritura) */
 .typewriter::after {
   content: "";
   position: absolute;
@@ -51,15 +63,33 @@ body {
   right: 0;
   width: 1px;
   height: 100%;
-  background-color: white; /* Color de la línea (cursor) */
-  animation: blink-caret 0.75s step-end infinite; /* Efecto de parpadeo */
+  background-color: white;
+  animation: blink-caret 0.75s step-end infinite; 
 }
 
-/* Animación para simular el parpadeo del cursor (línea) */
 @keyframes blink-caret {
   50% {
     background-color: transparent;
   }
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 50px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
