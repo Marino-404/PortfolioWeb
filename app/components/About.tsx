@@ -3,7 +3,7 @@
 import { useAppState } from "../store/app-state";
 import { aboutTextContent } from "../utils/text-content";
 
-const h1Style = "text-8xl font-bold typewriter mr-4 color-primary";
+const h1Style = "text-7xl font-bold typewriter mr-4 color-primary";
 const h2Style = "text-2xl font-light mb-2 text-gray-400";
 
 function About() {
