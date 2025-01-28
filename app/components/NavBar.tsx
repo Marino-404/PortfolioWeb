@@ -3,6 +3,8 @@
 import { useAppState } from "../store/app-state"; 
 import { aboutTextContent } from "../utils/text-content";
 import { useEffect } from "react";
+import { FiGithub } from "react-icons/fi";
+
 
 
 const LanguageSwitcher = () => {
@@ -18,7 +20,7 @@ const LanguageSwitcher = () => {
   }, [lang]); 
 
   return (
-    <div className="relative flex items-center justify-center" >
+    <div className="relative flex flex-row items-center justify-center mt-4" >
             <span
               onClick={() => {
                 changeLang(!lang);

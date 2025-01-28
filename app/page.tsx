@@ -1,14 +1,12 @@
 import Background from "./components/Background";
-import About from "./components/About";
-import Nav from "./components/Nav";
+import HomePage from "./components/HomePage";
 
 export default function Home() {
 
   return (
     <>
-      <Nav />
+      <HomePage />
       <Background />
-      <About />
     </>
   );
 }
