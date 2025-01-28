@@ -20,7 +20,7 @@ const LanguageSwitcher = () => {
   }, [lang]); 
 
   return (
-    <div className="relative flex flex-row items-center justify-center mt-4" >
+    <div className="relative flex flex-row items-center justify-center w-full h-[25px]" >
             <span
               onClick={() => {
                 changeLang(!lang);
@@ -29,7 +29,7 @@ const LanguageSwitcher = () => {
                 lang ? "opacity-100" : "opacity-0"
               } cursor-pointer top-[2.5px] transition-opacity absolute duration-300 h-[20px] w-[20px]`}
             >
-              es
+              en
             </span>
 
             <span
@@ -40,7 +40,7 @@ const LanguageSwitcher = () => {
                 lang ? "opacity-0" : "opacity-100"
               } transition-opacity duration-300 absolute h-[20px] w-[20px]`}
             >
-              en
+              es
             </span>
         </div>
     

@@ -3,7 +3,7 @@ import { create } from "zustand";
 
 export interface AppState {
     theme: boolean; // true = light, false = dark
-    lang: boolean; // true = english, false = spanish
+    lang: boolean; // true = spanish, false = english
     changeTheme: (theme: boolean) => void;
     changeLang: (lang: boolean) => void;
 }
