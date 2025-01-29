@@ -3,12 +3,12 @@ export const aboutTextContent = (lang: boolean) => {
     if (lang) {
       return {
         h1: "Juan",
-        h2: "Hola, soy",
+        h2: "Bienvenidos, yo soy",
       };
     } else {
       return {
         h1: "Juan",
-        h2: "Hey, I am",
+        h2: "Welcome, I am",
       };
     } 
       

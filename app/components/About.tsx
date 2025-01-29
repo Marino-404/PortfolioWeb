@@ -8,7 +8,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const h1Style = "text-6xl font-semibold typewriter mb-6";
 const h2Style = "text-2xl font-light mb-2 ";
-const pStyle = "text-lg font-light max-w-xl";
+const pStyle = "text-md font-light max-w-xl";
 const strongStyle = "font-semibold";
 
 function About() {

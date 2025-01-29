@@ -11,8 +11,8 @@ export default function HomePage() {
     <div
       className={`flex flex-col h-screen w-screen overflow-hidden ${
         theme
-          ? "selection:bg-[#f0f0f0] selection:text-[#090909] text-[#090909] bg-[#f0f0f0]"
-          : "selection:bg-[#090909] selection:text-[#f0f0f0] text-[#f0f0f0] bg-[#090909]"
+          ? "selection:bg-[#090909] selection:text-[#f0f0f0]  text-[#090909] bg-[#f0f0f0]"
+          : "selection:bg-[#f0f0f0] selection:text-[#090909] text-[#f0f0f0] bg-[#090909]"
       }`}
       style={{
         backgroundImage: `url('${theme ? "/fondo.jpg" : "/fondo-dark.jpg"}')`,
