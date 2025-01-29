@@ -28,9 +28,9 @@ const LanguageSwitcher = () => {
           transition={{ duration: 1 }}
         >
           {theme ? (
-            <IoMdSunny className="h-[16px] w-[16px] transition-transform duration-300 hover:rotate-180" />
-          ) : (
             <IoMdMoon className="h-[16px] w-[16px] transition-transform duration-300 hover:rotate-180" />
+          ) : (
+            <IoMdSunny className="h-[16px] w-[16px] transition-transform duration-300 hover:rotate-180" />
           )}
         </motion.button>
 
