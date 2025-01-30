@@ -36,7 +36,7 @@ const LanguageSwitcher = () => {
 
         <motion.button
           onClick={toggleLanguage}
-          className="w-[30px] h-[30px] flex items-center justify-center text-xs border border-gray-500 rounded-full transition-opacity duration-300 hover:opacity-80"
+          className="w-[30px] h-[30px] flex items-center justify-center text-xs border border-gray-500 rounded-full transition-opacity duration-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}

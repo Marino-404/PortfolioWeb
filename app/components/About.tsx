@@ -33,7 +33,13 @@ function About() {
                     animate={{ opacity: 1, x: 0 }}  
                     transition={{ duration: 2 }}  
                 >
-                    {textContent.h1} <span className="text-primary">Marino</span> Rova. 
+                    {textContent.h1} <span
+  className={`bg-gradient-to-b ${
+    theme  ? "from-[#023535] to-[#008F8C]" : "from-[#008F8C] to-[#023535]" 
+  } bg-clip-text text-transparent`}
+>
+  Marino
+</span> Rova.
                 </motion.h1>
 
                 <motion.div
