@@ -20,8 +20,8 @@ function About() {
             <div className="flex flex-col h-auto w-auto items-start justify-start p-4 min-h-[350px]">
                 <motion.h2
                     className={h2Style}
-                    initial={{ opacity: 0, y: 20 }}  
-                    animate={{ opacity: 1, y: 0 }}    
+                    initial={{ opacity: 0, x: -50 }}  
+                    animate={{ opacity: 1, x: 0 }}    
                     transition={{ duration: 1.2 }}      
                 >
                     {textContent.h2}
@@ -44,7 +44,7 @@ function About() {
 
                 <motion.div
                     className={pStyle}
-                    initial={{ opacity: 0, y: 20 }}  
+                    initial={{ opacity: 0, y: 50 }}  
                     animate={{ opacity: 1, y: 0 }}    
                     transition={{ duration: 1.8 }}      
                 >
