@@ -1,19 +1,19 @@
 "use client";
 
 import { Montserrat } from "next/font/google";
-import { Metadata } from "next";
 import "./globals.css";
-import NavBar from "./components/NavBar"; 
-import { useAppState } from "./store/app-state"; ; 
-import { metadata} from "./head";
+import { useAppState } from "./store/app-state";
+import NavBar from "./components/NavBar";
 import FooterNav from "./components/FooterNav";
+import { Metadata } from "next";
+import { metadata } from "./head"
+
 
 const montserrat = Montserrat({
   weight: ["100","200", "300", "400", "500", "600",  "700", "800", "900"],
   subsets: ["latin"], 
   preload: true,
 });
-
 
 export default function RootLayout({
   children,
@@ -42,6 +42,7 @@ export default function RootLayout({
           backgroundPosition: "center",
         }}
       >
+
         <NavBar />
         
         <div className="flex flex-col h-screen w-screen overflow-hidden">

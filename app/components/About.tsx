@@ -15,6 +15,7 @@ function About() {
     const textContent = aboutTextContent(lang);
 
     return (
+        
         <div className="flex flex-col h-screen w-screen items-center justify-center"> 
             <div className="flex flex-col h-auto w-auto items-start justify-start p-4 min-h-[350px]">
                 <motion.h2

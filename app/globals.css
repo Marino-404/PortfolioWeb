@@ -47,7 +47,7 @@
   white-space: nowrap;
   overflow: hidden;
   position: relative;
-  animation: typing 3s steps(100) 1s 1 normal both; 
+  animation: typing 2s steps(100) 1s 1 normal both; 
 }
 
 .typewriter-light::after,
