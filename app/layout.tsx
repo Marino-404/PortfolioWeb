@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} ${themeClasses}`}
         style={{
-          backgroundImage: `url('${theme ? "/fondo.jpg" : "/fondo-dark.jpg"}')`,  // Fondo dinámico según el theme
+          backgroundImage: `url('${theme ? "/fondo.jpg" : "/fondo-dark.jpg"}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

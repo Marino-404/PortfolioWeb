@@ -3,12 +3,11 @@
 import { useAppState } from "../store/app-state";
 import { aboutTextContent } from "../utils/text-content";
 import { motion } from "framer-motion";
-import { IoIosArrowDown } from "react-icons/io";
 
 
-const h1Style = "text-6xl font-semibold typewriter mb-6";
-const h2Style = "text-2xl font-light mb-2 ";
-const pStyle = "text-md font-light max-w-xl";
+const h1Style = "text-4xl md:text-6xl font-semibold typewriter mb-6";
+const h2Style = "text-xl md:text-2xl font-light mb-2 ";
+const pStyle = "text-sm md:text-lg font-light max-w-xl";
 const strongStyle = "font-semibold";
 
 function About() {
@@ -16,8 +15,8 @@ function About() {
     const textContent = aboutTextContent(lang);
 
     return (
-        <div className="flex flex-col h-screen w-full items-center justify-center"> 
-            <div className="flex flex-col h-auto items-start justify-start px-4 min-h-[350px]">
+        <div className="flex flex-col h-screen w-screen items-center justify-center"> 
+            <div className="flex flex-col h-auto w-auto items-start justify-start p-4 min-h-[350px]">
                 <motion.h2
                     className={h2Style}
                     initial={{ opacity: 0, y: 20 }}  
@@ -34,12 +33,12 @@ function About() {
                     transition={{ duration: 1.4 }}  
                 >
                     {textContent.h1} <span
-  className={`bg-gradient-to-b ${
-    theme  ? "from-[#023535] to-[#008F8C]" : "from-[#008F8C] to-[#023535]" 
-  } bg-clip-text text-transparent`}
->
-  Marino
-</span> Rova.
+                    className={`bg-gradient-to-b ${
+                    theme  ? "from-[#023535] to-[#008F8C]" : "from-[#008F8C] to-[#023535]" 
+                        } bg-clip-text text-transparent`}
+                    >
+                        Marino
+                    </span> Rova.
                 </motion.h1>
 
                 <motion.div
