@@ -9,8 +9,8 @@ export interface AppState {
 }
 
 export const useAppState = create<AppState>((set) => ({
-    theme: true,
-    lang: true,
+    theme: true, // Light theme by default
+    lang: true, // Spanish by default
     changeTheme: (theme: boolean) => set({ theme: theme }),
     changeLang: (lang: boolean) => set({ lang: lang }),
 }));

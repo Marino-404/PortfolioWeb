@@ -1,19 +1,28 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Montserrat } from "next/font/google";
+import { Metadata } from "next";
 import "./globals.css";
+import NavBar from "./components/NavBar"; 
+import { useAppState } from "./store/app-state"; ; 
+import { metadata} from "./head";
+import FooterNav from "./components/FooterNav";
 
 const montserrat = Montserrat();
 
-export const metadata: Metadata = {
-  title: "Portfolio Juan Marino",
-  description: "Portfolio Website of Juan Marino",
-};
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  
+  const { theme } = useAppState();
+
+  const themeClasses = theme
+    ? "selection:bg-[#090909] selection:text-[#f0f0f0] text-[#090909] bg-[#f0f0f0]"
+    : "selection:bg-[#f0f0f0] selection:text-[#090909] text-[#f0f0f0] bg-[#090909]";
+
   return (
     <html lang="en" translate="no">
       <head>
@@ -22,10 +31,24 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
-        className={montserrat.className}
+        className={`${montserrat.className} ${themeClasses}`}
+        style={{
+          backgroundImage: `url('${theme ? "/fondo.jpg" : "/fondo-dark.jpg"}')`,  // Fondo dinámico según el theme
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        {children}
+        <NavBar />
+        
+        <div className="flex flex-col h-screen w-screen overflow-hidden">
+          {children}
+        </div>
+
+        <FooterNav />
+
       </body>
     </html>
   );
 }
+
+

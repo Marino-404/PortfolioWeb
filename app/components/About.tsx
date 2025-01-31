@@ -22,7 +22,7 @@ function About() {
                     className={h2Style}
                     initial={{ opacity: 0, y: 20 }}  
                     animate={{ opacity: 1, y: 0 }}    
-                    transition={{ duration: 1.8 }}      
+                    transition={{ duration: 1.2 }}      
                 >
                     {textContent.h2}
                 </motion.h2>
@@ -31,7 +31,7 @@ function About() {
                     className={`${h1Style} ${theme ? "typewriter-light" : "typewriter-dark"}`}
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}  
-                    transition={{ duration: 2 }}  
+                    transition={{ duration: 1.4 }}  
                 >
                     {textContent.h1} <span
   className={`bg-gradient-to-b ${
@@ -46,34 +46,12 @@ function About() {
                     className={pStyle}
                     initial={{ opacity: 0, y: 20 }}  
                     animate={{ opacity: 1, y: 0 }}    
-                    transition={{ duration: 2.2 }}      
+                    transition={{ duration: 1.8 }}      
                 >
                     { lang ? ( <p className="mb-2" >Actualmente estoy iniciando mi carrera como <strong className={strongStyle}>desarrollador de software frontend</strong> y <strong className={strongStyle}>diseñador UX/UI.</strong></p> ) : (<p className="mb-2" >Currently I am starting my career as a <strong className={strongStyle}>frontend software developer and UX/UI designer.</strong></p>) }
                     { lang ? ( <p>Me especializo en <strong className={strongStyle}>React.js</strong> y <strong className={strongStyle} >Next.js</strong> para el desarrollo y <strong className={strongStyle}>Figma</strong> para el diseño, con un enfoque directo en la creación de interfaces de usuario modernas, escalables y altamente funcionales.</p>) : (<p>I am specialized in <strong className={strongStyle}>React</strong> and <strong className={strongStyle}>Next.js</strong> for development and <strong className={strongStyle}>Figma</strong> for design, with a direct focus on creating attractive, scalable, and highly functional user interfaces.</p>) }
                 </motion.div>
                 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}  
-                    animate={{ opacity: 1, y: 0 }}    
-                    transition={{ duration: 2.4 }}      
-                >
-                    <span className="flex flex-row items-center gap-1 hover:cursor-pointer">
-                        <motion.div
-                            animate={{
-                                y: [0, 10, 0], 
-                            }}
-                            transition={{
-                                y: {
-                                    repeat: Infinity,   
-                                    duration: 2,         
-                                    ease: "easeInOut",  
-                                },
-                            }}
-                        >
-                            <IoIosArrowDown className="h-6 w-6 mt-5" />
-                        </motion.div>
-                    </span>
-                </motion.div>
 
             </div>
         </div>
