@@ -10,7 +10,6 @@ import { usePathname } from "next/navigation";
 const FooterNav = () => {
   const pathname = usePathname();
 
-  // Configuración de animación del borde
   const activeStyles = "border border-primary rounded-full";
   const navItems = [
     { href: "/", icon: <IoHome />, label: "Home" },
@@ -26,7 +25,7 @@ const FooterNav = () => {
         transition={{ duration: 1 }}
       >
         <nav className="flex gap-2 rounded-full items-center px-2 py-0.5 backdrop-blur-xl relative">
-          {navItems.map(({ href, icon, label }, index) => (
+          {navItems.map(({ href, icon, label }) => (
             <Link key={href} href={href} aria-label={label} className="relative">
               <div className="w-11 h-10 flex items-center justify-center">
                 {icon}

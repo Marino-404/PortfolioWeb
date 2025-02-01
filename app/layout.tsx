@@ -5,8 +5,6 @@ import "./globals.css";
 import { useAppState } from "./store/app-state";
 import NavBar from "./components/NavBar";
 import FooterNav from "./components/FooterNav";
-import { Metadata } from "next";
-import { metadata } from "./head"
 
 
 const montserrat = Montserrat({
