@@ -5,7 +5,7 @@ import { aboutTextContent } from "../utils/text-content";
 import { motion } from "framer-motion";
 
 
-const h1Style = "text-4xl md:text-6xl font-semibold typewriter mb-6";
+const h1Style = "text-4xl md:text-6xl font-semibold typewriter mb-2 md:mb-6";
 const h2Style = "text-xl md:text-2xl font-light mb-2 ";
 const pStyle = "text-sm md:text-lg font-light max-w-xl";
 const strongStyle = "font-semibold";
