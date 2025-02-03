@@ -26,12 +26,30 @@ export default function RootLayout({
 
   return (
     <html lang="en" translate="no">
-      <head>
-        <meta name="google" content="notranslate" />
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta title="Juan Marino Rova" />
-      </head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
+    <meta name="description" content="Descripción de la página o del contenido de la web" />
+    <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3" />
+    <meta name="author" content="Juan Marino Rova" />
+    <meta name="robots" content="index, follow" />
+    <meta title="Juan Marino Rova" />
+    <meta property="og:title" content="Juan Marino Rova" />
+    <meta property="og:description" content="Descripción de la página o del contenido de la web" />
+    <meta property="og:image" content="url-de-la-imagen-de-previo.jpg" />
+    <meta property="og:url" content="https://www.ejemplo.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Juan Marino Rova" />
+    <meta name="twitter:description" content="Descripción de la página o del contenido de la web" />
+    <meta name="twitter:image" content="url-de-la-imagen-de-previo.jpg" />
+    <link rel="icon" href="ruta-del-favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Juan Marino Rova</title>
+</head>
+
       <body
         className={`${montserrat.className} ${themeClasses}`}
         style={{
