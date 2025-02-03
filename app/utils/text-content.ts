@@ -24,3 +24,34 @@ export const skillsTextContent = (lang: boolean) => {
       };
     } 
   };
+  
+
+  export const contactTextContent = (lang: boolean) => {
+    if (lang) {
+      return {
+        h1: "Contactame!",
+      };
+    } else {
+      return {
+        h1: "Contact me!",
+      };
+    } 
+  }
+
+  export const placeholderTextContent = (lang: boolean) => {
+    if (lang) {
+      return {
+        name: "Nombre",
+        email: "Email",
+        message: "Mensaje",
+        send: "Enviar",
+      };
+    } else {
+      return {
+        name: "Name",
+        email: "Email",
+        message: "Message",
+        send: "Send",
+      };
+    } 
+  };

@@ -1,12 +1,12 @@
 "use client";
 
 import React from 'react';
+import { useAppState } from '../store/app-state';
+import { skillsTextContent } from '../utils/text-content';
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaFigma, FaNodeJs  } from 'react-icons/fa';
 import { BiLogoPostgresql } from 'react-icons/bi';
 import { RiReactjsLine, RiNextjsLine, RiTailwindCssFill } from 'react-icons/ri';
-import { useAppState } from '../store/app-state';
-import { skillsTextContent } from '../utils/text-content';
 import { SiTypescript, SiJavascript  } from "react-icons/si";
 
 
@@ -23,15 +23,18 @@ const skills = [
   { icon: <FaFigma />, name: "Figma" }
 ];
 
-const SkillsComponent = () => {
+export const tittleStyle = "text-xl md:text-4xl font-normal mb-6 md:mb-12";
+export const containerStyle = "flex flex-col text-center items-center justify-center h-full p-6";
+
+export default function SkillsComponent() {
 
   const { lang } = useAppState((state) => state);
   const textContent = skillsTextContent(lang);
 
   return (
-    <div className="flex flex-col items-center justify-center h-full p-6">
+    <div className={containerStyle}>
       <motion.h1
-        className="text-4xl font-normal mb-12"
+        className={tittleStyle}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -47,8 +50,8 @@ const SkillsComponent = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
           >
-            <div className="text-primary text-5xl">{skill.icon}</div>
-            <p className="mt-2 text-lg font-medium text-gray-600">{skill.name}</p>
+            <div className="text-primary text-3xl md:text-5xl">{skill.icon}</div>
+            <p className="mt-2 text:xs md:text-lg font-medium text-gray-600">{skill.name}</p>
           </motion.div>
         ))}
       </div>
@@ -56,6 +59,5 @@ const SkillsComponent = () => {
   );
 };
 
-export default SkillsComponent;
 
 
