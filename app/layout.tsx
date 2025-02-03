@@ -30,6 +30,7 @@ export default function RootLayout({
         <meta name="google" content="notranslate" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta title="Juan Marino Rova" />
       </head>
       <body
         className={`${montserrat.className} ${themeClasses}`}
