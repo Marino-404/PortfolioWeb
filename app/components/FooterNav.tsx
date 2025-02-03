@@ -18,7 +18,7 @@ const FooterNav = () => {
   ];
 
   return (
-    <div className="fixed bottom-12 left-1/2 -translate-x-1/2 flex justify-center items-center">
+    <div className="fixed bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 flex justify-center items-center">
       <motion.nav
         initial={{ opacity: 0, y: 28 }}
         animate={{ opacity: 1, y: 0 }}
