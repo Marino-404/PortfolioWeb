@@ -29,20 +29,19 @@ export default function RootLayout({
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google" content="notranslate" />
-    <meta name="description" content="Descripción de la página o del contenido de la web" />
-    <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3" />
+    <meta name="description" content="Página personal de Juan Marino Rova, donde se destacan mis proyectos, experiencias y habilidades. Aquí podrás conocer más sobre mi trabajo y logros profesionales." />
+    <meta name="keywords" content="Desarrollo de Software, Soluciones Tecnológicas, Innovación Tecnológica" />
     <meta name="author" content="Juan Marino Rova" />
     <meta name="robots" content="index, follow" />
     <meta title="Juan Marino Rova" />
     <meta property="og:title" content="Juan Marino Rova" />
-    <meta property="og:description" content="Descripción de la página o del contenido de la web" />
-    <meta property="og:image" content="url-de-la-imagen-de-previo.jpg" />
-    <meta property="og:url" content="https://www.ejemplo.com" />
+    <meta property="og:description" content="Página personal de Juan Marino Rova, donde se destacan mis proyectos, experiencias y habilidades. Aquí podrás conocer más sobre mi trabajo y logros profesionales." />
+    <meta property="og:image" content= "./favicon.ico" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Juan Marino Rova" />
-    <meta name="twitter:description" content="Descripción de la página o del contenido de la web" />
-    <meta name="twitter:image" content="url-de-la-imagen-de-previo.jpg" />
+    <meta name="twitter:description" content="Página personal de Juan Marino Rova, donde se destacan mis proyectos, experiencias y habilidades. Aquí podrás conocer más sobre mi trabajo y logros profesionales." />
+    <meta name="twitter:image" content="./favicon.ico" />
     <link rel="icon" href="ruta-del-favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="estilos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
