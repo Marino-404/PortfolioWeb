@@ -5,7 +5,7 @@ import { useAppState } from "../store/app-state";
 import { contactTextContent } from "../utils/text-content";
 import { motion } from "framer-motion";
 import { FiSend } from "react-icons/fi";
-import { tittleStyle, containerStyle } from "../skills/page";
+import { tittleStyle, containerStyle } from "../components/styles";
 import { placeholderTextContent } from "../utils/text-content";
 
 export default function Contact() {

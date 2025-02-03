@@ -3,12 +3,7 @@
 import { useAppState } from "../store/app-state";
 import { aboutTextContent } from "../utils/text-content";
 import { motion } from "framer-motion";
-
-
-const h1Style = "text-4xl md:text-6xl font-semibold typewriter mb-2 md:mb-6";
-const h2Style = "text-xl md:text-2xl font-light mb-2 ";
-const pStyle = "text-sm md:text-lg font-light max-w-xl";
-const strongStyle = "font-semibold";
+import { h1Style, h2Style, pStyle, strongStyle } from "../components/styles";
 
 function About() {
     const { lang, theme } = useAppState((state) => state);

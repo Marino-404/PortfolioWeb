@@ -8,6 +8,7 @@ import { FaHtml5, FaCss3Alt, FaFigma, FaNodeJs  } from 'react-icons/fa';
 import { BiLogoPostgresql } from 'react-icons/bi';
 import { RiReactjsLine, RiNextjsLine, RiTailwindCssFill } from 'react-icons/ri';
 import { SiTypescript, SiJavascript  } from "react-icons/si";
+import { containerStyle, tittleStyle } from '../components/styles';
 
 
 const skills = [
@@ -23,8 +24,7 @@ const skills = [
   { icon: <FaFigma />, name: "Figma" }
 ];
 
-export const tittleStyle = "text-xl md:text-4xl font-normal mb-6 md:mb-12";
-export const containerStyle = "flex flex-col text-center items-center justify-center h-full p-6";
+
 
 export default function SkillsComponent() {
 
