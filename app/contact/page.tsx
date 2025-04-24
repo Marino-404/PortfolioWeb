@@ -1,23 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { useAppState } from "../store/app-state";
-import { contactTextContent } from "../utils/text-content";
+import {
+  contactTextContent,
+  placeholderTextContent,
+} from "../utils/text-content";
 import { motion } from "framer-motion";
 import { FiSend } from "react-icons/fi";
 import { tittleStyle, containerStyle } from "../components/styles";
-import { placeholderTextContent } from "../utils/text-content";
-
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
 
 export default function Contact() {
   const { lang } = useAppState((state) => state);
   const textContent = contactTextContent(lang);
+  const placeholders = placeholderTextContent(lang);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -28,6 +25,10 @@ export default function Contact() {
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    emailjs.init("x-1aGYnOGyLoMHtBX");
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -41,12 +42,13 @@ export default function Contact() {
       setErrorMessage("Por favor completá todos los campos.");
       return false;
     }
-    // Validación básica de email
+
     const emailRegex = /\S+@\S+\.\S+/;
     if (!emailRegex.test(formData.email)) {
       setErrorMessage("El email no es válido.");
       return false;
     }
+
     return true;
   };
 
@@ -62,16 +64,11 @@ export default function Contact() {
     setErrorMessage("");
 
     emailjs
-      .send(
-        "service_28fzavh",
-        "template_4eqxgsm",
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-        },
-        "x-1aGYnOGyLoMHtBX"
-      )
+      .send("service_28fzavh", "template_4eqxgsm", {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      })
       .then(() => {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
@@ -94,7 +91,8 @@ export default function Contact() {
       </motion.h1>
 
       <motion.form
-        className=" w-full max-w-lg"
+        onSubmit={handleSubmit}
+        className="w-full max-w-lg"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
@@ -105,14 +103,15 @@ export default function Contact() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder={placeholderTextContent(lang).name}
+            placeholder={placeholders.name}
             className="w-1/2 border-b border-gray-500 focus:border-primary bg-transparent outline-none py-2"
           />
           <motion.input
+            type="text"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder={placeholderTextContent(lang).email}
+            placeholder={placeholders.email}
             className="w-1/2 border-b border-gray-500 focus:border-primary bg-transparent outline-none py-2"
           />
         </div>
@@ -121,17 +120,33 @@ export default function Contact() {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          placeholder={placeholderTextContent(lang).message}
+          placeholder={placeholders.message}
           rows={3}
           className="mt-4 w-full border-b border-gray-500 focus:border-primary bg-transparent outline-none py-2 resize-none"
         ></motion.textarea>
+
+        <div className="mt-2 h-8 overflow-hidden">
+          {status === "error" && (
+            <p className="text-sm text-red-500 font-medium">{errorMessage}</p>
+          )}
+          {status === "success" && (
+            <p className="text-sm text-green-500 font-medium">
+              ¡Mensaje enviado con éxito!
+            </p>
+          )}
+          {status === "loading" && (
+            <p className="text-sm text-gray-500 font-medium">Enviando...</p>
+          )}
+        </div>
 
         <div className="mt-6 flex justify-end">
           <motion.button
             type="submit"
             className="flex items-center gap-2 text-md font-medium"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            {placeholderTextContent(lang).send}
+            {placeholders.send}
             <FiSend />
           </motion.button>
         </div>
