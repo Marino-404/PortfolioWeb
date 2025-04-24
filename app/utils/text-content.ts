@@ -15,11 +15,11 @@ export const aboutTextContent = (lang: boolean) => {
 export const skillsTextContent = (lang: boolean) => {
   if (lang) {
     return {
-      h1: "Stack de Tecnologías:",
+      h1: "Los mejores diseños en cualquier dispositivo.",
     };
   } else {
     return {
-      h1: "Tech Stack:",
+      h1: "The best designs on any device.",
     };
   }
 };
