@@ -38,31 +38,21 @@ export default function RootLayout({
         />
         <meta name="author" content="Juan Marino Rova" />
         <meta name="robots" content="index, follow" />
-        <meta title="Juan Marino Rova" />
         <meta property="og:title" content="Juan Marino Rova" />
         <meta
           property="og:description"
           content="Página personal de Juan Marino Rova, donde se destacan mis proyectos, experiencias y habilidades. Aquí podrás conocer más sobre mi trabajo y logros profesionales."
         />
-        <meta property="og:image" content="./favicon.ico" />
+        <meta property="og:image" content="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Juan Marino Rova" />
         <meta
           name="twitter:description"
-          content="Página personal de Juan Marino Rova, donde se destacan mis proyectos, experiencias y habilidades. Aquí podrás conocer más sobre mi trabajo y logros profesionales."
+          content="Página personal de Juan Marino Rova, donde se destacan mis proyectos, experiencias y habilidades."
         />
-        <meta name="twitter:image" content="./favicon.ico" />
-        <link rel="icon" href="ruta-del-favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="estilos.css" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        />
+        <meta name="twitter:image" content="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <title>Juan Marino Rova</title>
       </head>
 
