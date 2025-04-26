@@ -16,14 +16,14 @@ export default function SkillsComponent() {
     <div
       className={`${containerStyle} flex flex-col items-center justify-center`}
     >
-      <div className="flex flex-col w-auto md:flex-row items-center justify-center gap-0 md:gap-1 px-2 py-4">
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-6 px-4 py-8">
         <motion.div
-          className=" text-center md:text-left"
+          className="text-center md:text-left"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className=" text-4xl md:text-5xl font-light leading-tight md:leading-snug">
+          <h1 className="text-4xl md:text-5xl font-light leading-tight md:leading-snug">
             {h1Parts[0]} {h1Parts[1]} <br />
             <span
               className={`font-bold bg-gradient-to-b ${
