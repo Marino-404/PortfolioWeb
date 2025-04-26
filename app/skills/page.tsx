@@ -16,9 +16,10 @@ export default function SkillsComponent() {
     <div
       className={`${containerStyle} flex flex-col items-center justify-center`}
     >
-      <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-6 px-4 py-8">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10 py-12 px-4 max-w-6xl mx-auto">
+        {/* Texto */}
         <motion.div
-          className="text-center md:text-left"
+          className="text-center md:text-left flex-1"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -48,8 +49,9 @@ export default function SkillsComponent() {
           </h1>
         </motion.div>
 
+        {/* Imagen */}
         <motion.div
-          className="flex-[0.9] flex justify-center items-center"
+          className="flex flex justify-center items-center"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -57,9 +59,9 @@ export default function SkillsComponent() {
           <Image
             src="/mockup sin fondo.png"
             alt="Mockup Design"
-            width={600}
-            height={600}
-            className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
+            width={800}
+            height={800}
+            className="w-[500px] md:w-[500px] lg:w-[500px] object-contain"
           />
         </motion.div>
       </div>
