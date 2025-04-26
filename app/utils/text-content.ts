@@ -27,11 +27,11 @@ export const skillsTextContent = (lang: boolean) => {
 export const contactTextContent = (lang: boolean) => {
   if (lang) {
     return {
-      h1: "Contactame!",
+      h1: "Trabajemos juntos!",
     };
   } else {
     return {
-      h1: "Contac tme!",
+      h1: "Let's work together!",
     };
   }
 };

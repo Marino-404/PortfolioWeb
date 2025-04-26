@@ -7,31 +7,56 @@ import { motion } from "framer-motion";
 import { containerStyle, tittleStyle } from "../components/styles";
 
 export default function SkillsComponent() {
-  const { lang } = useAppState((state) => state);
+  const { lang, theme } = useAppState((state) => state);
   const textContent = skillsTextContent(lang);
+  const h1Parts = textContent.h1.split(" ");
 
   return (
-    <div className={containerStyle}>
-      <div className="flex flex-col items-center justify-center gap-6 text-center">
-        <motion.h1
-          className={tittleStyle}
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+    <div
+      className={`${containerStyle} flex flex-col items-center justify-center`}
+    >
+      <div className="flex flex-col w-auto md:flex-row items-center justify-center gap-0 md:gap-1 px-2 py-4">
+        <motion.div
+          className=" text-center md:text-left"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          {textContent.h1}
-        </motion.h1>
+          <h1 className=" text-4xl md:text-5xl font-light leading-tight md:leading-snug">
+            {h1Parts[0]} {h1Parts[1]} <br />
+            <span
+              className={`font-bold bg-gradient-to-b ${
+                theme
+                  ? "from-[#023535] to-[#008F8C]"
+                  : "from-[#008F8C] to-[#023535]"
+              } bg-clip-text text-transparent`}
+            >
+              {h1Parts[2]}
+            </span>{" "}
+            {h1Parts[3]} <br />
+            {h1Parts[4]} <br />
+            <span
+              className={`font-bold bg-gradient-to-b ${
+                theme
+                  ? "from-[#023535] to-[#008F8C]"
+                  : "from-[#008F8C] to-[#023535]"
+              } bg-clip-text text-transparent`}
+            >
+              {h1Parts[5]}
+            </span>
+          </h1>
+        </motion.div>
 
         <motion.div
-          className="flex-shrink-0"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          className="flex-[0.9] flex justify-center items-center"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
         >
           <img
             src="/mockup sin fondo.png"
             alt="Mockup Design"
-            className="w-[600px] h-[300px] object-cover"
+            className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
           />
         </motion.div>
       </div>
