@@ -2,9 +2,10 @@
 
 import React from "react";
 import { useAppState } from "../store/app-state";
+import Image from "next/image";
 import { skillsTextContent } from "../utils/text-content";
 import { motion } from "framer-motion";
-import { containerStyle, tittleStyle } from "../components/styles";
+import { containerStyle } from "../components/styles";
 
 export default function SkillsComponent() {
   const { lang, theme } = useAppState((state) => state);
@@ -53,7 +54,7 @@ export default function SkillsComponent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <img
+          <Image
             src="/mockup sin fondo.png"
             alt="Mockup Design"
             className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
