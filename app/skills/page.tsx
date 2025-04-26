@@ -14,17 +14,30 @@ export default function SkillsComponent() {
 
   return (
     <div
-      className={`${containerStyle} flex flex-col items-center justify-center`}
+      className={`${containerStyle} flex flex-col items-center justify-center min-h-screen`}
     >
-      <div className="flex flex-col md:flex-row items-center justify-center gap-10 py-12 px-4 max-w-6xl mx-auto">
+      <div className="flex flex-col md:flex-row items-center justify-center py-16 px-6 max-w-7xl w-full gap-4 md:gap-6">
         {/* Texto */}
         <motion.div
-          className="text-center md:text-left flex-1"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          className="text-center md:text-left basis-auto"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2 } },
+          }}
         >
-          <h1 className="text-4xl md:text-5xl font-light leading-tight md:leading-snug">
+          <motion.h1
+            className="text-3xl md:text-4xl sm:text-5xl font-light leading-tight md:leading-snug"
+            variants={{
+              hidden: { opacity: 0, y: -30 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.8, ease: "easeOut" },
+              },
+            }}
+          >
             {h1Parts[0]} {h1Parts[1]} <br />
             <span
               className={`font-bold bg-gradient-to-b ${
@@ -46,22 +59,22 @@ export default function SkillsComponent() {
             >
               {h1Parts[5]}
             </span>
-          </h1>
+          </motion.h1>
         </motion.div>
 
         {/* Imagen */}
         <motion.div
-          className="flex flex justify-center items-center"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          className="justify-center items-center"
+          initial={{ opacity: 0, scale: 0.95, rotate: -5 }}
+          animate={{ opacity: 1, scale: [1.05, 1], rotate: 0 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
         >
           <Image
             src="/mockup sin fondo.png"
             alt="Mockup Design"
             width={800}
             height={800}
-            className="w-[500px] md:w-[500px] lg:w-[500px] object-contain"
+            className="w-[500px] sm:w-[400px] md:w-[500px] object-contain"
           />
         </motion.div>
       </div>
