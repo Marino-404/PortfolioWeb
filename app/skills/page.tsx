@@ -57,6 +57,8 @@ export default function SkillsComponent() {
           <Image
             src="/mockup sin fondo.png"
             alt="Mockup Design"
+            width={600}
+            height={600}
             className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
           />
         </motion.div>
