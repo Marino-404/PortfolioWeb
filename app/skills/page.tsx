@@ -12,7 +12,7 @@ export default function SkillsComponent() {
 
   return (
     <div className={containerStyle}>
-      <div className="flex flex-col h-auto w-full md:w-auto items-start justify-start p-4 min-h-[350px]">
+      <div className="flex flex-col h-auto w-full md:w-[600px] items-start justify-start p-4 min-h-[350px]">
         <motion.h1
           className={tittleStyle}
           initial={{ opacity: 0, x: -50 }}
