@@ -73,7 +73,7 @@ function About() {
           )}
           {lang ? (
             <p>
-              Aunque mi enfoque principal está en el desarrollo, tengo una
+              A pesar que mi enfoque principal está en el desarrollo, tengo una
               sólida base en{" "}
               <strong className={strongStyle}>diseño UX/UI</strong> con dominio
               de herramientas como{" "}
@@ -81,8 +81,9 @@ function About() {
             </p>
           ) : (
             <p>
-              While my main focus is on development, I have a solid foundation
-              in <strong className={strongStyle}>UX/UI design</strong> with
+              Although my main focus is on development, I have a solid
+              foundation in{" "}
+              <strong className={strongStyle}>UX/UI design</strong> with
               proficiency in tools like{" "}
               <strong className={strongStyle}>Figma</strong>.
             </p>
