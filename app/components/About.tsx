@@ -3,7 +3,12 @@
 import { useAppState } from "../store/app-state";
 import { aboutTextContent } from "../utils/text-content";
 import { motion } from "framer-motion";
-import { h1Style, h2Style, pStyle, strongStyle } from "../components/styles";
+import {
+  h1Style,
+  pStyle,
+  strongStyle,
+  tittleStyle,
+} from "../components/styles";
 
 function About() {
   const { lang, theme } = useAppState((state) => state);
@@ -13,7 +18,7 @@ function About() {
     <div className="flex flex-col h-screen w-screen items-center justify-center">
       <div className="flex flex-col h-auto w-auto items-start justify-start p-4 min-h-[350px]">
         <motion.h2
-          className={h2Style}
+          className={tittleStyle}
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2 }}

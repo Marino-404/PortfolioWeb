@@ -105,7 +105,7 @@ export default function Contact() {
 
   return (
     <div className={containerStyle}>
-      <div className="flex flex-col h-auto w-auto items-start justify-start p-6 min-h-[350px]">
+      <div className="flex flex-col h-auto w-auto items-start justify-start p-4 min-h-[350px]">
         <motion.h1
           className={tittleStyle}
           initial={{ opacity: 0, x: -50 }}
@@ -131,7 +131,7 @@ export default function Contact() {
 
         <motion.form
           onSubmit={handleSubmit}
-          className="w-[400px] md:w-[600px] max-w-lg"
+          className="w-auto md:w-[600px] max-w-lg"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.8 }}
