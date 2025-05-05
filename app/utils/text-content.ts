@@ -62,24 +62,6 @@ export const formAlertsTextContent = (lang: boolean) => {
   if (lang) {
     return {
       name: {
-        required: "Name is required",
-        minLength: "Name must be at least 3 characters",
-      },
-      email: {
-        required: "Email is required",
-        pattern: "Email is not valid",
-      },
-      message: {
-        required: "Message is required",
-        minLength: "Message must be at least 3 characters",
-      },
-      success: "Message sent successfully",
-      error: "Error sending message",
-      loading: "Sending...",
-    };
-  } else {
-    return {
-      name: {
         required: "El nombre es requerido",
         minLength: "El nombre debe tener al menos 3 caracteres",
       },
@@ -94,6 +76,24 @@ export const formAlertsTextContent = (lang: boolean) => {
       success: "Mensaje enviado con éxito",
       error: "Hubo un error al enviar el mensaje",
       loading: "Enviando...",
+    };
+  } else {
+    return {
+      name: {
+        required: "Name is required",
+        minLength: "Name must be at least 3 characters",
+      },
+      email: {
+        required: "Email is required",
+        pattern: "Email is not valid",
+      },
+      message: {
+        required: "Message is required",
+        minLength: "Message must be at least 3 characters",
+      },
+      success: "Message sent successfully",
+      error: "Error sending message",
+      loading: "Sending...",
     };
   }
 };
