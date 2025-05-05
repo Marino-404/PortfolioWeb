@@ -105,7 +105,7 @@ export default function Contact() {
 
   return (
     <div className={containerStyle}>
-      <div className="flex flex-col h-auto w-auto items-start justify-start p-4 min-h-[350px]">
+      <div className="flex flex-col h-auto w-auto items-start justify-start p-6 min-h-[350px]">
         <motion.h1
           className={tittleStyle}
           initial={{ opacity: 0, x: -50 }}
@@ -121,7 +121,7 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.8 }}
         >
-          <p className="mb-2 md:mb-6">
+          <p className="mb-4 md:mb-6">
             {textContent.p}{" "}
             <strong className="flex gap-1 items-center">
               Marinorova25@gmail.com
