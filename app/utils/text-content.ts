@@ -27,11 +27,15 @@ export const skillsTextContent = (lang: boolean) => {
 export const contactTextContent = (lang: boolean) => {
   if (lang) {
     return {
-      h1: "Trabajemos juntos!",
+      h1: "Trabajemos juntos !",
+      p: "Envía un mensaje o contactate conmigo directamente a",
+      callToAct: "Send",
     };
   } else {
     return {
-      h1: "Let's work together!",
+      h1: "Let's work together !",
+      p: "Get in touch or send me an email directly at",
+      callToAct: "Enviar",
     };
   }
 };
@@ -71,6 +75,7 @@ export const formAlertsTextContent = (lang: boolean) => {
       },
       success: "Message sent successfully",
       error: "Error sending message",
+      loading: "Sending...",
     };
   } else {
     return {
@@ -80,7 +85,6 @@ export const formAlertsTextContent = (lang: boolean) => {
       },
       email: {
         required: "El correo electrónico es requerido",
-        minLength: "El correo electrónico debe tener al menos 3 caracteres",
         pattern: "El correo electrónico no es válido",
       },
       message: {
@@ -88,7 +92,8 @@ export const formAlertsTextContent = (lang: boolean) => {
         minLength: "El mensaje debe tener al menos 3 caracteres",
       },
       success: "Mensaje enviado con éxito",
-      error: "Error al enviar el mensaje",
+      error: "Hubo un error al enviar el mensaje",
+      loading: "Enviando...",
     };
   }
 };

@@ -17,7 +17,6 @@ export default function SkillsComponent() {
       className={`${containerStyle} flex flex-col items-center justify-center min-h-screen`}
     >
       <div className="flex flex-col md:flex-row items-center justify-center py-16 px-6 max-w-7xl w-full gap-4 md:gap-6">
-        {/* Texto */}
         <motion.h1
           className="text-3xl md:text-4xl xl:text-5xl sm:text-5xl font-light
           leading-tight md:leading-snug xl:leading-snug"
@@ -49,7 +48,6 @@ export default function SkillsComponent() {
           </span>
         </motion.h1>
 
-        {/* Imagen */}
         <motion.div
           className="justify-center items-center"
           initial={{ opacity: 0, scale: 0.95, rotate: -5 }}
