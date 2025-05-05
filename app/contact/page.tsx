@@ -18,7 +18,7 @@ import {
 import { tittleStyle, containerStyle } from "../components/styles";
 
 const inputStyle =
-  "text-sm w-1/2 border-b-2 border-gray-500 focus:border-primary bg-transparent outline-none py-2 appearance-none rounded-none";
+  "text-sm w-1/2 py-2 border-b-2 border-gray-500 focus:border-primary bg-transparent outline-none appearance-none rounded-none";
 
 export default function Contact() {
   const { lang } = useAppState((state) => state);

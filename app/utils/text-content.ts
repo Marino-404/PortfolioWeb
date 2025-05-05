@@ -16,10 +16,12 @@ export const skillsTextContent = (lang: boolean) => {
   if (lang) {
     return {
       h1: "Los mejores diseños en cualquier dispositivo.",
+      h2: "Mi stack de tecnologías",
     };
   } else {
     return {
       h1: "The best designs on any device.",
+      h2: "My tech stack",
     };
   }
 };

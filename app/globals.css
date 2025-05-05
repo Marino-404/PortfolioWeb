@@ -80,3 +80,20 @@ select:-webkit-autofill {
 .typewriter-dark::after {
   background-color: #dcdcdc;
 }
+
+/* 👇 Animaciones para InfiniteMovingCards */
+@layer utilities {
+  .animate-scroller {
+    animation: scroll var(--animation-duration, 40s) linear infinite;
+    animation-direction: var(--animation-direction, forwards);
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
