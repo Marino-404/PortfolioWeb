@@ -18,7 +18,7 @@ import {
 import { tittleStyle, containerStyle } from "../components/styles";
 
 const inputStyle =
-  "w-1/2 border-b-2 border-gray-500 focus:border-primary bg-transparent outline-none py-2";
+  "text-sm w-1/2 border-b-2 border-gray-500 focus:border-primary bg-transparent outline-none py-2 appearance-none rounded-none";
 
 export default function Contact() {
   const { lang } = useAppState((state) => state);
@@ -161,7 +161,7 @@ export default function Contact() {
             onChange={handleChange}
             placeholder={placeholders.message}
             rows={3}
-            className="mt-4 w-full border-b-2 border-gray-500 focus:border-primary bg-transparent outline-none py-2 resize-none"
+            className="mt-4 w-full border-b-2 border-gray-500 focus:border-primary bg-transparent outline-none py-2 resize-none appearance-none rounded-none"
           ></motion.textarea>
 
           <div className="mt-2 h-8 overflow-hidden">

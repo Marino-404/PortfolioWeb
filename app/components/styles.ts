@@ -1,7 +1,7 @@
 export const tittleStyle = "text-2xl md:text-4xl font-semibold mb-4 md:mb-6";
 
 export const containerStyle =
-  "flex flex-col h-screen w-screen items-center justify-center";
+  "flex flex-col h-screen w-screen items-center justify-center p-4";
 
 export const h1Style =
   "text-4xl md:text-6xl font-semibold typewriter mb-2 md:mb-6";
