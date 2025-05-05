@@ -108,20 +108,20 @@ export default function Contact() {
       <div className="flex flex-col h-auto w-auto items-start justify-start p-4 min-h-[350px]">
         <motion.h1
           className={tittleStyle}
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2 }}
         >
           {textContent.h1}
         </motion.h1>
 
         <motion.h1
           className="text-xs md:text-sm"
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.8 }}
         >
-          <p className="mb-4">
+          <p className="mb-2 md:mb-6">
             {textContent.p}{" "}
             <strong className="flex gap-1 items-center">
               Marinorova25@gmail.com
@@ -131,10 +131,10 @@ export default function Contact() {
 
         <motion.form
           onSubmit={handleSubmit}
-          className="w-[400px] md:w-[600px] max-w-lg mt-6"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          className="w-[400px] md:w-[600px] max-w-lg"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.8 }}
         >
           <div className="flex gap-4">
             <motion.input
@@ -185,7 +185,7 @@ export default function Contact() {
             )}
           </div>
 
-          <div className="mt-6 flex justify-end">
+          <div className="mt-2 flex justify-end">
             <motion.button
               type="submit"
               className="flex items-center gap-2 text-md font-medium"
