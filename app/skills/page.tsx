@@ -16,8 +16,8 @@ export default function SkillsComponent() {
   return (
     <div className={containerStyle}>
       <div className="flex flex-col h-auto w-full md:w-[800px] items-start justify-start px-4 min-h-[350px]">
-        <div className="flex flex-row gap-4 md:gap-12 items-start md:items-center justify-start w-full">
-          <div className="flex flex-col w-3/4 md:w-1/2 items-start justify-start min-h-[350px]">
+        <div className="flex flex-row gap-2 md:gap-12 items-center md:items-center justify-start w-full">
+          <div className="flex flex-col w-3/4 md:w-1/2 items-start justify-start mb-4">
             <motion.h1
               className={tittleStyle}
               initial={{ opacity: 0, x: -50 }}
@@ -36,7 +36,7 @@ export default function SkillsComponent() {
             </motion.div>
             <Items />
           </div>
-          <motion.h1
+          <motion.div
             className="h-auto w-auto flex items-center justify-center"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -49,7 +49,7 @@ export default function SkillsComponent() {
               height={80}
               priority
             />
-          </motion.h1>
+          </motion.div>
         </div>
         <motion.h1
           className={tittleStyle}
