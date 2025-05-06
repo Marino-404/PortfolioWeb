@@ -27,12 +27,12 @@ export default function SkillsComponent() {
               {textContent.h1}
             </motion.h1>
             <motion.div
-              className="h-full w-full flex gap-4 items-center justify-start text-xs md:text-sm mb-4"
+              className="h-[120px] w-full flex gap-4 items-center justify-start text-xs md:text-sm mb-4"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.8 }}
             >
-              <p className="mb-2">{textContent.p}</p>
+              <p>{textContent.p}</p>
             </motion.div>
             <Items />
           </div>
