@@ -16,7 +16,7 @@ export default function SkillsComponent() {
   return (
     <div className={containerStyle}>
       <div className="flex flex-col h-auto w-full md:w-[800px] items-start justify-start px-4 min-h-[350px]">
-        <div className="flex flex-row gap-2 md:gap-12 items-center md:items-center justify-start w-full">
+        <div className="flex flex-row gap-2 md:gap-12 items-center justify-start w-full">
           <div className="flex flex-col w-3/4 md:w-1/2 items-start justify-start mb-4">
             <motion.h1
               className={tittleStyle}
@@ -60,7 +60,7 @@ export default function SkillsComponent() {
           {textContent.h2}
         </motion.h1>
         <motion.div
-          className="flex flex-wrap gap-1 md:gap-4"
+          className="flex flex-wrap gap-1 md:gap-4 mb-6"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.8 }}
