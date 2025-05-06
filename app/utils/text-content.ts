@@ -18,18 +18,20 @@ export const skillsTextContent = (lang: boolean) => {
       h1: "Trabajos",
       h2: "Tecnologías",
       p: "Me especializo en la creación de interfaces que no solo facilitan la interacción, sino que potencian, diferencian y refuerzan la identidad de tu marca. Cada diseño está pensado para conectar con los usuarios y dejar una impresión duradera.",
-      h3: "Diseño iterativo y desarrollo ágil.",
-      h4: "Interfaces centradas en el usuario y código escalable.",
-      h5: "Prototipos funcionales con tecnologías modernas.",
+      h3: "Diseño iterativo.",
+      h4: "Código escalable.",
+      h5: "Prototipos funcionales.",
+      h6: "Desarrollo ágil.",
     };
   } else {
     return {
       h1: "Works",
       h2: "Tech stack",
       p: "I specialize in creating interfaces that not only facilitate interaction but also enhance, differentiate, and reinforce your brand identity. Each design is crafted to connect with users and leave a lasting impression.",
-      h3: "Iterative design and agile development.",
-      h4: "User-centered interfaces and scalable code.",
-      h5: "Functional prototypes with modern tech.",
+      h3: "Iterative design.",
+      h4: "Scalable code.",
+      h5: "Functional prototypes.",
+      h6: "Agile development.",
     };
   }
 };
