@@ -57,12 +57,12 @@ export const techCards = [
     card: <FigmaCard />,
   },
   {
-    tag: "NestJS",
-    card: <NestCard />,
-  },
-  {
     tag: "CSS",
     card: <CSSCard />,
+  },
+  {
+    tag: "NestJS",
+    card: <NestCard />,
   },
   {
     tag: "Node.js",

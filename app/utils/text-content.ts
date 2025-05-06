@@ -37,13 +37,13 @@ export const skillsTextContent = (lang: boolean) => {
 export const contactTextContent = (lang: boolean) => {
   if (lang) {
     return {
-      h1: "Trabajemos juntos !",
+      h1: "Contactame",
       p: "Envía un mensaje o contactate conmigo directamente a",
       callToAct: "Send",
     };
   } else {
     return {
-      h1: "Let's work together !",
+      h1: "Contact me",
       p: "Get in touch or send me an email directly at",
       callToAct: "Enviar",
     };
