@@ -18,7 +18,7 @@ const FooterNav = () => {
   ];
 
   return (
-    <div className="fixed bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 flex justify-center items-center">
+    <div className="fixed bottom-4 md:bottom-12 left-1/2 -translate-x-1/2 flex justify-center items-center">
       <motion.nav
         initial={{ opacity: 0, y: 28 }}
         animate={{ opacity: 1, y: 0 }}
@@ -26,7 +26,12 @@ const FooterNav = () => {
       >
         <nav className="flex gap-2 rounded-full items-center px-2 py-0.5 backdrop-blur-xl relative">
           {navItems.map(({ href, icon, label }) => (
-            <Link key={href} href={href} aria-label={label} className="relative">
+            <Link
+              key={href}
+              href={href}
+              aria-label={label}
+              className="relative"
+            >
               <div className="w-11 h-10 flex items-center justify-center">
                 {icon}
               </div>
@@ -46,7 +51,3 @@ const FooterNav = () => {
 };
 
 export default FooterNav;
-
-
-
-

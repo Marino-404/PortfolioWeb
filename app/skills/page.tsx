@@ -60,7 +60,7 @@ export default function SkillsComponent() {
           {textContent.h2}
         </motion.h1>
         <motion.div
-          className="flex flex-wrap gap-1 md:gap-4 mb-12"
+          className="flex flex-wrap gap-1 md:gap-4 mb-14"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.8 }}
